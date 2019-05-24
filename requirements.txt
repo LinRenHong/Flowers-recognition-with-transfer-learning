@@ -1,7 +1,7 @@
 Scipy
 pillow
 matplotlib
-tensorFlow
+tensorflow
 numpy==1.16.3
 tf-nightly
 tensorflow-hub==0.4.0
