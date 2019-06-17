@@ -170,7 +170,7 @@ print("Success!")
 plotModelPredictions(data_gen=val_data_gen, model=model)
 
 # Use model to predict your own image
-# image_path = r'YOUR_IMAGE_PATH''
+# image_path = r'YOUR_IMAGE_PATH'
 # plotModelPrediction(image_path)
 
 
