@@ -132,9 +132,16 @@ val_data_gen = image_gen_val.flow_from_directory(
 classes = ['roses', 'daisy', 'dandelion', 'sunflowers', 'tulips']
 
 # Transfer Learning
-URL = "https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/2"
-feature_extractor = hub.KerasLayer(URL,
+# URL = "https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/2"
+# feature_extractor = hub.KerasLayer(URL,
+#                                    input_shape=(IMG_SHAPE, IMG_SHAPE,3))
+
+
+PRE_TRAIN_MODEL_PATH = r"/Users/linrenhong/Documents/Mac Program/Python/CNN/Flowers_Recognition_With_CNN/pre_train_model"
+feature_extractor = hub.KerasLayer(PRE_TRAIN_MODEL_PATH,
                                    input_shape=(IMG_SHAPE, IMG_SHAPE,3))
+
+
 
 # Freeze the pre-train model
 feature_extractor.trainable = False
